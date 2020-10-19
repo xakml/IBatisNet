@@ -45,6 +45,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -100,13 +102,17 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <Name>log4net</Name>
-      <HintPath>..\External-Bin\Net\1.1\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.11\lib\net40\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\External-Bin\nunit\2.5.5.10112\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.7.10213\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.7.10213\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework, Version=1.0.3865.21394, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.7.10213\lib\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -118,6 +124,7 @@
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
@@ -322,7 +329,6 @@
     <Compile Include="NUnit\SqlMapTests\TransactionTest.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="bin\Debug\cool.jpg" />
     <Content Include="cool.jpg" />
     <Content Include="Maps\Access\OleDb\Account.xml" />
     <Content Include="Maps\Access\OleDb\Category.xml" />
@@ -607,32 +613,22 @@
     <Content Include="Scripts\SQLite3\swap-procedure.sql" />
     <Content Include="Scripts\SQLite3\teardown.sql" />
     <Content Include="Scripts\SQLite3\user-init.sql" />
-    <EmbeddedResource Include="bin\Debug\SqlMap_SQLite3_SQLite3.config">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Scripts\SQLite3\ps_SelectByIdList.sql" />
-    <None Include="bin\Debug\IBatisNet.DataMapper.Test.dll.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bin\Debug\SqlMap_Access_OleDb.config" />
-    <None Include="bin\Debug\SqlMap_MSSQL_Odbc.config" />
-    <None Include="bin\Debug\SqlMap_MSSQL_OleDb.config" />
-    <None Include="bin\Debug\SqlMap_MySql_ByteFx.config" />
-    <None Include="bin\Debug\SqlMap_MySql_MySql.config" />
-    <None Include="bin\Debug\SqlMap_Oracle_ODP.config" />
-    <None Include="bin\Debug\SqlMap_Oracle_OracleClient.config" />
-    <None Include="bin\Debug\SqlMap_PostgreSQL_Npgsql.config" />
-    <None Include="bin\Debug\test.config" />
     <None Include="DataBase-Template.config" />
     <None Include="IBatisNet.Test.build" />
     <None Include="Scripts\MSSQL\ps_SelectByIdList.sql" />
-    <EmbeddedResource Include="bin\Debug\providers.config">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\SqlMap_MSSQL_SqlClient.config">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Maps\MSSQL\SqlClient\Account.xml" />
+    <None Include="SqlMap_Access_OleDb.config" />
+    <None Include="SqlMap_MSSQL_Odbc.config" />
+    <None Include="SqlMap_MSSQL_OleDb.config" />
+    <None Include="SqlMap_MSSQL_SqlClient.config" />
+    <None Include="SqlMap_MySql_ByteFx.config" />
+    <None Include="SqlMap_MySql_MySql.config" />
+    <None Include="SqlMap_Oracle_ODP.config" />
+    <None Include="SqlMap_Oracle_OracleClient.config" />
+    <None Include="SqlMap_PostgreSQL_Npgsql.config" />
+    <None Include="test.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

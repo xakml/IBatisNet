@@ -78,7 +78,7 @@ namespace IBatisNet.Common.Utilities
         	// SqlCommandBuilder.DeriveParameters(<command>) does not support transactions. 
         	// If the command is within a transaction, you will get the following error: 
 			// “SqlCommandBuilder Execute requires the command to have a transaction object 
-        	// when the connection assigned to the command is in a pending local transaction” 
+        	// when the connection assigned to the command is in a pending local transaction?
         	// even when the command object does in fact have a transaction object. 
 			using (IDbConnection connection = session.DataSource.DbProvider.CreateConnection())
 			{
