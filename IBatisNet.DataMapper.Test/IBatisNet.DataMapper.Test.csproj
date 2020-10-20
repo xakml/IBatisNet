@@ -55,7 +55,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>TRACE;DEBUG;dotnet2</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;dotnet234</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
@@ -104,6 +104,9 @@
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.11\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.5.7.10213\lib\nunit.framework.dll</HintPath>
@@ -330,7 +333,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Content Include="cool.jpg" />
-    <Content Include="Maps\Access\OleDb\Account.xml" />
+    <Content Include="Maps\Access\OleDb\Account.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Maps\Access\OleDb\Category.xml" />
     <Content Include="Maps\Access\OleDb\Complex.xml" />
     <Content Include="Maps\Access\OleDb\Document.xml" />
@@ -613,22 +618,52 @@
     <Content Include="Scripts\SQLite3\swap-procedure.sql" />
     <Content Include="Scripts\SQLite3\teardown.sql" />
     <Content Include="Scripts\SQLite3\user-init.sql" />
+    <None Include="App.config" />
+    <None Include="database.config" />
     <None Include="packages.config" />
+    <None Include="providers.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Scripts\SQLite3\ps_SelectByIdList.sql" />
     <None Include="DataBase-Template.config" />
     <None Include="IBatisNet.Test.build" />
     <None Include="Scripts\MSSQL\ps_SelectByIdList.sql" />
-    <EmbeddedResource Include="Maps\MSSQL\SqlClient\Account.xml" />
-    <None Include="SqlMap_Access_OleDb.config" />
-    <None Include="SqlMap_MSSQL_Odbc.config" />
-    <None Include="SqlMap_MSSQL_OleDb.config" />
-    <None Include="SqlMap_MSSQL_SqlClient.config" />
-    <None Include="SqlMap_MySql_ByteFx.config" />
-    <None Include="SqlMap_MySql_MySql.config" />
-    <None Include="SqlMap_Oracle_ODP.config" />
-    <None Include="SqlMap_Oracle_OracleClient.config" />
-    <None Include="SqlMap_PostgreSQL_Npgsql.config" />
-    <None Include="test.config" />
+    <EmbeddedResource Include="Maps\MSSQL\SqlClient\Account.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="SqlMap_Access_OleDb.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MSSQL_Odbc.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MSSQL_OleDb.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MSSQL_SqlClient.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MySql_MySql.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MySql_ByteFx.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_MySql_.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_Oracle_ODP.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_Oracle_OracleClient.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap_PostgreSQL_Npgsql.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="test.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

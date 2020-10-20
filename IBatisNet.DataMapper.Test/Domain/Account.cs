@@ -146,5 +146,10 @@ namespace IBatisNet.DataMapper.Test.Domain
             get { return _document; }
             set { _document = value; }
         }
-	}
+
+        public override string ToString()
+        {
+            return string.Format("Id={0},FirstName={1}, LastName={2}",this.id,this._firstName, this._lastName);
+        }
+    }
 }

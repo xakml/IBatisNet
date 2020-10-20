@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace IBatisNet.DataMapper.Test.Domain
 {
 	/// <summary>
-	/// Description résumée de Order.
+	/// Description Order.
 	/// </summary>
 	[Serializable]
 	public class Order

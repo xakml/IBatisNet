@@ -49,7 +49,9 @@ namespace IBatisNet.DataMapper.Test.NUnit.SqlMapTests
             Account account = NewAccount6();
 
             sqlMap.BeginTransaction();
-            sqlMap.Insert("InsertAccountViaParameterMap", account);
+            object rtnValue = sqlMap.Insert("InsertAccountViaParameterMap", account);
+            if (null != rtnValue)
+                Console.WriteLine(rtnValue.GetType().ToString());
             InsertNewAccount();
             sqlMap.CommitTransaction();
 

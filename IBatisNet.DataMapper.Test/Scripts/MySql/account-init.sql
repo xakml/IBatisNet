@@ -11,7 +11,7 @@ create table Accounts
    Account_Banner_Option		  varchar(255),
    Account_Cart_Option			  int,
    primary key (Account_Id)
-) TYPE=INNODB;
+) ENGINE=INNODB;
 
 INSERT INTO Accounts VALUES(1,'Joe', 'Dalton', 'Joe.Dalton@somewhere.com', 'Oui', 200);
 INSERT INTO Accounts VALUES(2,'Averel', 'Dalton', 'Averel.Dalton@somewhere.com', 'Oui', 200);

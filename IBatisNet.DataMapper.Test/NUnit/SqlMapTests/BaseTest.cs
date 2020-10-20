@@ -48,8 +48,9 @@ namespace IBatisNet.DataMapper.Test.NUnit.SqlMapTests
             ScriptDirectory = Path.Combine(Path.Combine(Path.Combine(Path.Combine(Resources.ApplicationBase, ".."), ".."), "Scripts"),
                 ConfigurationManager.AppSettings["database"]) + Path.DirectorySeparatorChar;
 #else
-            ScriptDirectory = Path.Combine(Path.Combine(Path.Combine(Path.Combine(Resources.ApplicationBase, ".."), ".."), "Scripts"), 
-                ConfigurationSettings.AppSettings["database"]) + Path.DirectorySeparatorChar;
+            string path_1 = Path.Combine(Path.Combine(Path.Combine(Resources.ApplicationBase, ".."), ".."), "Scripts");
+            ScriptDirectory = Path.Combine(path_1
+                ,ConfigurationManager.AppSettings["database"]) + Path.DirectorySeparatorChar;
 #endif
         }
 
@@ -75,7 +76,7 @@ namespace IBatisNet.DataMapper.Test.NUnit.SqlMapTests
             properties.Add("nullableInt", "int");
             builder.Properties = properties;
 
-			string fileName = "sqlmap" + "_" + ConfigurationSettings.AppSettings["database"] + "_" + ConfigurationSettings.AppSettings["providerType"] + ".config";
+			string fileName = "sqlmap" + "_" + ConfigurationManager.AppSettings["database"] + "_" + ConfigurationManager.AppSettings["providerType"] + ".config";
 #endif
             try
             {

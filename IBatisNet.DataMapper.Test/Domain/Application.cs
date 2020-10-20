@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 #endif
 using System.Collections;
+using System.Collections.Generic;
 
 namespace IBatisNet.DataMapper.Test.Domain
 {
@@ -36,11 +37,11 @@ namespace IBatisNet.DataMapper.Test.Domain
             set { users = value; }
         }
 #else
-        private IList users;
-        public IList Users
+        private IList<ApplicationUser> users;
+        public IList<ApplicationUser> Users
         {
             get { return users; }
-            set { roles = users; }
+            set { users = value; }
         }        
 #endif
     }
